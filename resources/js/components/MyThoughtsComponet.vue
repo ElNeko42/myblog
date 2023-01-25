@@ -7,6 +7,7 @@
                 v-for="(thought,index) in thoughts" 
                 :key="thought.id"
                 :thought="thought"
+                @update="updateThought(index, ...arguments)"
                 @delete="deleteThought(index)
                 ">
             </thought-component>
@@ -35,6 +36,9 @@ export default {
         },
         deleteThought(index){
             this.thoughts.splice(index,1);
+        },
+        updateThought(index,thought){
+            this.thoughts[index]=thought
         }
     }
 }
