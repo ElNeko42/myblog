@@ -1,4 +1,5 @@
 <template>
+    <!--component to display the post-->
     <div class="container">
         <div class="card">
             <div class="card-header">Publicado en {{ thought.created_at }}</div>
