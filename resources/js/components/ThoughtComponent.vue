@@ -13,7 +13,7 @@
                     <button class="btn btn-default">
                         Editar
                     </button>
-                    <button class="btn btn-danger">
+                    <button class="btn btn-danger" v-on:click="onClickDelete">
                         Eliminar
                     </button>
                 </div>
@@ -26,6 +26,11 @@ export default {
     props: ['thought'],
     mounted() {
         console.log('post.'+this.thought.id)
+    },
+    methods:{
+        onClickDelete(){
+            this.$emit('delete')
+        }
     }
 }
 </script>
