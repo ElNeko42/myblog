@@ -1,3 +1,42 @@
+
+# APP SPA Laravel
+
+aplicacion SPA hecha con laravel y vue  de posteo y muestra de post de un blog (solo texto)
+
+install
+
+git clone https://github.com/ElNeko42/myblog.git
+
+compose update
+
+npm install
+
+php artisan migrate
+
+php artisan serve
+# DESARROLLO DE LA APP
+Hice la app en dos vistas una para cuando no estas logeado y otra para cuando lo estas.
+hice los componentes para cada vistas , intente hacer que los componentes detectactara si estabas logeado pero no me daban resultados a si que decidi hacer componentes para cada vistas, luego intente implemetar sweetalert, es una libreria npm de alertas pero me daba error y no consegui implemetarlo
+
+
+
+
+## Screenshots
+vista que muestra los post a los usuarios no logeado
+![App Screenshot](https://i.imgur.com/d031rrz.png)
+vista que muestra los post a los usuarios  logeado
+![App Screenshot](https://i.imgur.com/0rWazY0.png)
+
+
+
+
+
+
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
