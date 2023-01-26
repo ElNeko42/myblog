@@ -1,6 +1,7 @@
 <?php
-
+use App\Http\Controllers\ThoughtController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::post('/thoughts', [ThoughtController::class, 'store'])->name('store'); 
+
+Route::apiResource('thoughts', 'App\Http\Controllers\ThoughtController');

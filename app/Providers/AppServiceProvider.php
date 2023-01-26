@@ -15,6 +15,10 @@ class AppServiceProvider extends ServiceProvider
     {
         //
     }
+    public function map(){
+        $this->app->make('App\Http\Controllers\ThoughtController');
+
+    }
 
     /**
      * Bootstrap any application services.

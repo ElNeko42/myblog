@@ -20,15 +20,13 @@
 export default {
     data() {
         return {
-            thoughts: [{
-                'id': 1,
-                'description': 'abc',
-                'created_at': '24/01/2023'
-            }]
+            thoughts: []
         }
     },
     mounted() {
-        console.log('Component mounted.')
+        axios.get('/thoughts').then((response)=>{
+            this.thoughts=response.data
+        })
     },
     methods:{
         addThought(thought){

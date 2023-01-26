@@ -36,15 +36,23 @@ export default {
     },
     methods: {
         onClickDelete() {
-            this.$emit('delete')
-        },
-        onClickEdit() {
-            this.editMode = true
-        },
-        onClickUpdate() {
-            this.editMode = false
-            this.emit('update',this.thought)
-        }
+                axios.delete(`/thoughts/${this.thought.id}`).then(() => {
+                    this.$emit('delete');
+                });
+            },
+            onClickEdit() {
+                this.editMode = true;
+            },
+            onClickUpdate() {
+                const params = {
+                    description: this.thought.description
+                };
+                axios.put(`/thoughts/${this.thought.id}`, params).then((response) => {
+                    this.editMode = false;
+                    const thought = response.data;
+                    this.$emit('update', thought);
+                });
+            }
     }
 }
 </script>
